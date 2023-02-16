@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paint</title>
+    <link rel="stylesheet" href="css/syles.css">
+</head>
+<body>
+<h1 id="tit">PINTE!!!</h1>
+<p style="display: inline-block; margin-left: 20px;"> Largura do Quadro</p>
+<p style ="display: inline-block; margin-left: 70px;"> Altura do Quadro</p>
+<br>
+<input type="text" onchange="setWidth(this.value)" style ="display: inline-block;">
+
+<input style ="display: inline-block;" type="text" onchange="setHeight(this.value)" >
+
+<canvas id="canvas1" width="800" height="400" onmousedown="startPaint()" onmouseup="endPaint()" onmousemove="doPaint(event.offsetX,event.offsetY)">
+
+</canvas>
+<br>
+
+<p style="top: 100%; position: absolute;">Cor do Pincel</p>
+<p>Tamanho do Pincel:</p>
+<input type="range" id="sizeInput" min="1" max="50" value="50" oninput="resizeBrush(this.value)">
+<input style="top: 107%; position: absolute;" type="color" value="#000" onchange="changeColor(this.value)">
+<script src="js/index.js"></script>
+</body>
+
+</html>

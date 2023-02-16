@@ -1,0 +1,14 @@
+#tit{
+background-color: aqua;
+text-decoration: solid;
+text-emphasis-color: red;
+text-align: center;
+}
+#canvas1{
+    border: 1px solid black;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    top: 60%;
+  transform: translate(-50%, -50%);
+}
